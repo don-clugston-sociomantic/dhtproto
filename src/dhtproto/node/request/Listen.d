@@ -30,7 +30,7 @@ import dhtproto.node.request.model.SingleChannel;
 
 *******************************************************************************/
 
-public abstract scope class Listen : SingleChannel
+public abstract class Listen : SingleChannel
 {
     import dhtproto.node.request.model.DhtCommand;
 
@@ -59,7 +59,7 @@ public abstract scope class Listen : SingleChannel
 
         Keeps sending new records in dht channel to client until channel
         gets removed or client closes connection
-    
+
         Params:
             channel_name = channel name for request that was read and validated
                 earlier
@@ -98,7 +98,7 @@ public abstract scope class Listen : SingleChannel
 
             if (disconnect_detector.disconnected)
                 return;
-        
+
             this.writer.fiber.register(this.writer);
 
             Hash.HexDigest key;

@@ -39,7 +39,7 @@ import ocean.transition;
 
 *******************************************************************************/
 
-public scope class IPutRequest : IKeyRequest
+public class IPutRequest : IKeyRequest
 {
     /***************************************************************************
 

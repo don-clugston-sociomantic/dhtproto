@@ -26,7 +26,7 @@ import Protocol = dhtproto.node.request.GetSize;
 
 *******************************************************************************/
 
-public scope class GetSize : Protocol.GetSize
+public class GetSize : Protocol.GetSize
 {
     import fakedht.mixins.RequestConstruction;
     import fakedht.Storage;
@@ -39,7 +39,7 @@ public scope class GetSize : Protocol.GetSize
     ***************************************************************************/
 
     mixin RequestConstruction!();
- 
+
     /***************************************************************************
 
         Gets the aggregated size of all channels.

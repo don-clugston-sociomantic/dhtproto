@@ -33,7 +33,7 @@ import ocean.transition;
 
 *******************************************************************************/
 
-public scope class PutRequest : IPutRequest
+public class PutRequest : IPutRequest
 {
     /***************************************************************************
 

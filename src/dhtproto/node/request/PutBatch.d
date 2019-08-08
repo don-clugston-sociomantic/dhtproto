@@ -28,7 +28,7 @@ import dhtproto.node.request.model.SingleChannel;
 
 *******************************************************************************/
 
-public abstract scope class PutBatch : SingleChannel
+public abstract class PutBatch : SingleChannel
 {
     import dhtproto.node.request.model.DhtCommand;
 
@@ -62,7 +62,7 @@ public abstract scope class PutBatch : SingleChannel
     }
 
     /***************************************************************************
-        
+
         Read batch of records to put into the channel
 
     ***************************************************************************/
@@ -73,7 +73,7 @@ public abstract scope class PutBatch : SingleChannel
     }
 
     /***************************************************************************
-    
+
         Params:
             channel_name = channel name for request that was read and validated
                 earlier
@@ -98,7 +98,7 @@ public abstract scope class PutBatch : SingleChannel
                 this.writer.write(DhtConst.Status.E.WrongNode);
                 return;
             }
-            
+
             if (!this.isSizeAllowed(value.length))
             {
                 this.writer.write(DhtConst.Status.E.OutOfMemory);

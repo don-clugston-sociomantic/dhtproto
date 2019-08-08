@@ -42,7 +42,7 @@ static this ( )
 
 *******************************************************************************/
 
-public abstract scope class Redistribute : DhtCommand
+public abstract class Redistribute : DhtCommand
 {
     import dhtproto.node.request.params.RedistributeNode;
 
@@ -70,7 +70,7 @@ public abstract scope class Redistribute : DhtCommand
     private hash_t min, max;
 
     /***************************************************************************
-        
+
         Pointer to external data buffer used to store incoming redistribution
         data
 
@@ -90,7 +90,7 @@ public abstract scope class Redistribute : DhtCommand
     ***************************************************************************/
 
     public this ( FiberSelectReader reader, FiberSelectWriter writer,
-        DhtCommand.Resources resources ) 
+        DhtCommand.Resources resources )
     {
         super(DhtConst.Command.E.Redistribute, reader, writer, resources);
         this.redistribute_node_buffer = this.resources.getRedistributeNodeBuffer();
@@ -98,8 +98,8 @@ public abstract scope class Redistribute : DhtCommand
     }
 
     /***************************************************************************
-    
-        Destructor (relies on this being a scope class)
+
+        Destructor (relies on this being a class)
 
     ***************************************************************************/
 
@@ -151,7 +151,7 @@ public abstract scope class Redistribute : DhtCommand
     }
 
     /***************************************************************************
-    
+
         Validates hash ranges and forward to derivative methods to do actual
         redistribution which is 100% implementation-defined
 

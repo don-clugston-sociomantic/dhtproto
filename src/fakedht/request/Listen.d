@@ -44,7 +44,7 @@ static this ( )
 
 *******************************************************************************/
 
-public scope class Listen : Protocol.Listen, DhtListener
+public class Listen : Protocol.Listen, DhtListener
 {
     import ocean.core.Verify;
     import fakedht.mixins.RequestConstruction;
@@ -60,7 +60,7 @@ public scope class Listen : Protocol.Listen, DhtListener
 
     /***************************************************************************
 
-        Indicates that channel has been deleted and request needs to be 
+        Indicates that channel has been deleted and request needs to be
         terminated
 
     ***************************************************************************/
@@ -214,7 +214,7 @@ public scope class Listen : Protocol.Listen, DhtListener
                 this.channel_deleted = true;
                 break;
             default:
-               break; 
+               break;
         }
 
         this.event.trigger();

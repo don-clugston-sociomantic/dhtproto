@@ -176,7 +176,7 @@ public struct GetHashRange
 
 *******************************************************************************/
 
-private scope class GetHashRangeHandler
+private class GetHashRangeHandler
 {
     import swarm.neo.request.Command;
     import swarm.neo.client.Connection;

@@ -24,12 +24,12 @@ import ocean.core.Verify;
 import swarm.node.protocol.Command;
 
 /*******************************************************************************
-    
+
     DHT command base class
 
 *******************************************************************************/
 
-public abstract scope class DhtCommand : Command
+public abstract class DhtCommand : Command
 {
     import dhtproto.node.request.params.RedistributeNode;
 
@@ -37,7 +37,7 @@ public abstract scope class DhtCommand : Command
     import dhtproto.client.legacy.DhtConst;
 
     /***************************************************************************
-    
+
         Holds set of method to access temporary resources used by dhtnode
         protocol classes. Those all are placed into single class to simplify
         maintenance and eventually may be replaced with more automatic approach.

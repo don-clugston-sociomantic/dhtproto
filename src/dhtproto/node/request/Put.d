@@ -28,7 +28,7 @@ import dhtproto.node.request.model.SingleKey;
 
 *******************************************************************************/
 
-public abstract scope class Put : SingleKey
+public abstract class Put : SingleKey
 {
     import dhtproto.node.request.model.DhtCommand;
 
@@ -97,7 +97,7 @@ public abstract scope class Put : SingleKey
     protected size_t recordSizeLimit ( );
 
     /***************************************************************************
-    
+
         Stores incoming record
 
         Params:
@@ -123,7 +123,7 @@ public abstract scope class Put : SingleKey
             this.writer.write(DhtConst.Status.E.EmptyValue);
             return;
         }
-        
+
         if (!this.isSizeAllowed(value.length))
         {
             this.writer.write(DhtConst.Status.E.OutOfMemory);

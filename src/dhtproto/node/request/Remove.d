@@ -28,7 +28,7 @@ import dhtproto.node.request.model.SingleKey;
 
 *******************************************************************************/
 
-public abstract scope class Remove : SingleKey
+public abstract class Remove : SingleKey
 {
     import dhtproto.node.request.model.DhtCommand;
 
@@ -52,7 +52,7 @@ public abstract scope class Remove : SingleKey
     }
 
     /***************************************************************************
-    
+
         Params:
             channel_name = channel name for request that was read and validated
                 earlier
